@@ -3,3 +3,4 @@ Styling:
     gradient
     nav title
     home callout
+    nav bar fa icon
