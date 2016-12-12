@@ -1,7 +1,21 @@
-<% if false %>
-<%= form_for @profile do %>
+<%= form_for @profile, url: user_profile_path do |f| %>
     <div class="form-group">
-        
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: "form-control" %>
     </div>
-<% end %>
+    <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :contact_email %>
+        <%= f.email_field :contact_email, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
 <% end %>
