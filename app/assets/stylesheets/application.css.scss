@@ -19,16 +19,18 @@
  @import 'font-awesome';
  
 h1, h2, h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 //Gradient
 .home-callout, .navbar {
-    //Gradient provided by @_ighosh at uigradients.com
-    background: #0575E6; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #0575E6 , #021B79); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #0575E6 , #021B79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+8,52b152+16,008a00+34,005700+84,002400+100 */
+    background: #b4ddb4; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #b4ddb4 0%, #83c783 8%, #52b152 16%, #008a00 34%, #005700 84%, #002400 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #b4ddb4 0%,#83c783 8%,#52b152 16%,#008a00 34%,#005700 84%,#002400 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #b4ddb4 0%,#83c783 8%,#52b152 16%,#008a00 34%,#005700 84%,#002400 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+       
 }
 
 //Nav styles
@@ -37,7 +39,7 @@ h1, h2, h3 {
 }
 
 .navbar-brand {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
 }
 
