@@ -13,6 +13,7 @@
                         <p><%= @user.profile.description %></p>
                     </div>
                     <%= link_to "Account Management", edit_user_registration_path, class: "btn btn-default" %>
+                    <%= link_to "Update Profile", edit_user_profile_path(user_id: params[:id]), class: "btn btn-primary" %>
                 </div>
             </div>
         </div>
