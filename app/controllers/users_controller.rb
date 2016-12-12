@@ -5,4 +5,9 @@ class UsersController < ApplicationController
     def show
        @user = User.find(params[:id]) 
     end
+    
+    # GET /users
+    def index
+       @users = User.includes(:profile) 
+    end
 end
