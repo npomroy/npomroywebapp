@@ -1,3 +1,25 @@
-<% @users.each do |user| %>
-    <%= user.profile.first_name %> <%= user.profile.last_name %>
-<% end %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h1 class="text-center">Users</h1>
+            <% @users.each do |user| %>
+                <% if user.profile %>
+                    <div class="well row <%= cycle('white-bg', '') %>">
+                        <div class="col-sm-4">
+                            <% if user.profile.avatar %>
+                                <%= link_to user do %>
+                                    <%= image_tag user.profile.avatar.url, class: "img-user-index" %>
+                                <% end %>
+                            <% end %>
+                        </div>
+                        <div class="col-sm-8">
+                            <%= link_to user do %>
+                                <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+                            <% end %>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+</div>
