@@ -26,6 +26,10 @@
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><%= link_to "Web Apps", web_apps_path %></li>
+            <li><%= link_to "Where I Learned", schools_path %></li>
+          </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "About", about_path %></li>
             <% if user_signed_in? %>

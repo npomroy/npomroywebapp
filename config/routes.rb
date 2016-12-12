@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     resource :profile
   end
   get 'about', to: 'pages#about'
+  get 'web_apps', to: 'pages#web_apps'
+  get 'schools', to: 'pages#schools'
 end

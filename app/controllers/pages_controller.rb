@@ -6,4 +6,12 @@ class PagesController < ApplicationController
    def about
        
    end
+   
+   def web_apps
+      
+   end
+   
+   def schools
+      
+   end
 end
