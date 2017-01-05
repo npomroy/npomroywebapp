@@ -1,6 +1,16 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-3">
+            <div class="clock">
+                <div class="clock-face">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand min-hand"></div>
+                    <div class="hand second-hand"></div>
+                </div>
+            </div>
+            <h5 class="text-center"><%= DateTime.now.to_formatted_s(:long_ordinal) %></h5>
+        </div>
+        <div class="col-md-6">
             <%= image_tag "NPLogoVector500.png", class: "np-logo-main" %>
             <h2 class="text-center"><i class="fa fa-wrench"></i> Under Construction <i class="fa fa-hourglass-end"></i></h2>
             <h3 class="text-center"><i class="fa fa-envelope"></i> nickpomroy@outlook.com</h3>
@@ -10,3 +20,26 @@
         </div>
     </div>
 </div>
+
+<script>
+    const secondHand = document.querySelector('.second-hand');
+    const minuteHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+    function setDate() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const secondsDegrees = (seconds * 6) + 90;
+        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+        
+        const minutes = now.getMinutes();
+        const minutesDegrees = (minutes * 6) + 90;
+        minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
+        
+        const hours = now.getHours();
+        const hoursDegrees = (hours * 30) + 90;
+        hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+    }
+    
+    setInterval(setDate, 1000);
+</script>
