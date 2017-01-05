@@ -10,8 +10,18 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  
+  <div class="field form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :Submit, class: "btn btn-primary" %>
   </div>
 <% end %>
