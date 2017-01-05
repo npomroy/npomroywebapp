@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :blogposts
   root to: 'pages#construction'
   devise_for :users
   resources :users do
