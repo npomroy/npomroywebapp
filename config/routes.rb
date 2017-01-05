@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root to: 'pages#home'
+  root to: 'pages#construction'
   devise_for :users
   resources :users do
     resource :profile
