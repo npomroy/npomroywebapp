@@ -1,6 +1,7 @@
 class BlogpostsController < ApplicationController
   before_action :set_blogpost, only: [:show, :edit, :update, :destroy]
-  before_action :autheticate_user!
+  before_action :authenticate_user!
+  before_action :only_admin, only: [:new, :edit, :create, :update, :destroy]
 
   # GET /blogposts
   # GET /blogposts.json
@@ -73,5 +74,9 @@ class BlogpostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def blogpost_params
       params.require(:blogpost).permit(:title, :body, :user_id)
+    end
+    
+    def only_admin
+      redirect_to root_path unless current_user.admin
     end
 end
