@@ -10,6 +10,7 @@ class BlogpostsController < ApplicationController
   # GET /blogposts/1
   # GET /blogposts/1.json
   def show
+    @poster = Profile.find_by user_id: @blogpost.user_id
   end
 
   # GET /blogposts/new
