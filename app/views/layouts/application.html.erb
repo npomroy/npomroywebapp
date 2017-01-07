@@ -29,16 +29,16 @@
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-left">
             <!--Temp conditional-->
-            <% if false %>
+            <% if user_signed_in? && current_user.admin %>
               <li><%= link_to "Web Apps", web_apps_path %></li>
               <li><%= link_to "Where I Learned", schools_path %></li>
+              <li><%= link_to "Users", users_path %></li>
             <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Blog", blogposts_path %></li>
             <li><%= link_to "About", about_path %></li>
             <% if user_signed_in? %>
-              <li><%= link_to "Users", users_path %></li>
               <% if current_user.profile %>
                 <li><%= link_to current_user.profile.first_name << " " << current_user.profile.last_name[0] << ".", user_path(id: current_user.id) %></li>
               <% else %>
