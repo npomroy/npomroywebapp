@@ -18,7 +18,7 @@
         <div class="col-md-3">
             <h2 class="text-center">Latest Posts:</h2>
             <% @blogposts.each do |blogpost| %>
-                <div class="well">
+                <div class="well <%= cycle('white-bg', '') %>">
                     <h3 class="text-center"><%= blogpost.title %></h3>
                     <h6 class="text-right"><%= blogpost.created_at.to_formatted_s(:long_ordinal) %></h6>
                     <p><%= blogpost.body %></p>
