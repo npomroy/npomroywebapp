@@ -16,6 +16,10 @@ class PagesController < ApplicationController
       
    end
    
+   def construction
+      @blogposts = Blogpost.last(3)
+   end
+   
    private
       def only_admin
          redirect_to root_path unless current_user.admin
